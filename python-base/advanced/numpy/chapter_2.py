@@ -78,3 +78,32 @@ print(a8[:, 0]) ## 整列
 print(a8[0:2, :]) ## 0-1行的所有数据
 print(a8[0:2, 0:2]) ## 0-1行的0-1列的所有数据
 print(a8[:, 1:2]) ## 所有行的1列的所有数据
+print(a8[(0, 1), (0,1)]) ## 0行0列和1行1列的所有数据，前面的是行，后面的是列
+
+
+print(a8.ravel()) ## 展平数组, 把多维数组转换为一维数组
+print(a8.flatten()) ## 展平数组, 把多维数组转换为一维数组
+
+
+## 数组的拼接
+a11 = np.array([[1, 2, 3], [4, 5, 6]])
+a12 = np.array([[7, 8, 9], [10, 11, 12]])
+print(a11)
+print(a12)
+print(np.vstack((a11, a12))) ## 垂直拼接
+print(np.hstack((a11, a12))) ## 水平拼接
+print(np.concatenate((a11, a12), axis=0)) ## 垂直拼接
+print(np.concatenate((a11, a12), axis=1)) ## 水平拼接
+
+
+
+# 数组分割
+# split: 水平分割
+# hsplit: 水平分割
+# vsplit: 垂直分割
+array = np.arange(1, 10)
+print(np.split(array, 3))   # 传入的数必须是能够平分数组
+# print(np.split(array, 4))
+
+print(np.split(array, [2, 5])) # 传入的数组表示在第2个位置和第5个位置进行分割
+# 结果：[array([1, 2]), array([3, 4, 5]), array([6, 7, 8, 9])]
