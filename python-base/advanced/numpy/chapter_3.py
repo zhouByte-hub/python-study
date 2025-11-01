@@ -52,8 +52,8 @@ print(np.var(a))  # 数组元素的方差
 
 # 其他操作
 print(np.repeat(a, 2))  # 每个元素重复2次
-print(np.savetxt('array.txt', a))  # 保存数组
-print(np.loadtxt('array.txt'))  # 加载数组
+print(np.savetxt('python-base/advanced/numpy/file/array.txt', a))  # 保存数组
+print(np.loadtxt('python-base/advanced/numpy/file/array.txt'))  # 加载数组
 print(np.any(a))  # 数组中是否存在任意一个元素为True
 print(np.all(a))  # 数组中是否所有元素都为True
 print(np.where(len(a) / 2, a, 0))  # 满足条件的元素返回a，不满足的返回0
