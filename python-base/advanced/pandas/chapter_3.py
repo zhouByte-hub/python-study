@@ -68,6 +68,7 @@ print("------------------------------DataFrame 筛选")
 minAge = 5
 maxAge = 10
 print(data.query('A >= @minAge and B < @maxAge'))  ## 可以使用 and, or, not 等运算符
+print(data.query('A >= @minAge and B < @maxAge and C == 7').index) # 筛选出 A >= 5 且 B < 10 且 C == 7 的行索引
 
 
 # 排序
