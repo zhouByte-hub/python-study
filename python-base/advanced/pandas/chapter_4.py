@@ -96,3 +96,10 @@ print("-----------------------------")
 
 data = pd.Series([1,1,2,3,4,5])
 print(data.duplicated()) # 检查是否重复
+
+
+# 交叉表(pivot_table, crosstab)
+data1 = pd.DataFrame({'A': ['a', 'b', 'a', 'b'], 'B': ['one', 'one', 'two', 'two'], 'C': [1, 2, 3, 4]})
+print(data1)
+print("-----------------------------")
+print(pd.crosstab(data1['A'], data1['B'])) # 对 A 列和 B 列进行交叉表统计
