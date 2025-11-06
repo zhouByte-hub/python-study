@@ -22,6 +22,4 @@ import pandas as pd
 import numpy as np
 import time
 
-# data = pd.DataFrame(np.arange(20).reshape(4,5), columns=['A', 'B', 'C', 'D', 'E'], index=['a', 'b', 'c', 'd'])
-# temp = data[data['A'] > 0]
-# print(temp)
+

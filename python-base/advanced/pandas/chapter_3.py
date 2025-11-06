@@ -109,3 +109,10 @@ print(data)
 data['C'].replace([2, 7], [20, 70], inplace=True)
 print("------------------------------DataFrame 排序")
 print(data)
+
+
+data = pd.DataFrame(np.arange(20).reshape(4,5), columns=['A', 'B', 'C', 'D', 'E'], index=['a', 'b', 'c', 'd'])
+
+# 使用data['A'] > 0生成的布尔 Series 作为索引，从原始 DataFrame 中选择所有对应位置为 True 的行
+temp = data[data['A'] > 0]
+print(temp)
